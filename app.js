@@ -30,6 +30,7 @@ function getMealList(){
                <p>Please try again.</p>
             </div>
             `;
+            mealDetails.innerHTML = "";
         }
 
         searchResult.innerHTML = html;
