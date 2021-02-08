@@ -2,8 +2,6 @@
 const searchButton = document.getElementById("SearchBtn");
 searchButton.addEventListener('click', getMealList);
 
-const mealDetails = document.getElementById("mealDetails");
-
 
 // get meals list
 function getMealList(){
@@ -40,6 +38,8 @@ function getMealList(){
 
 // get meals details.........
 const getMealDetails = mealsId => {
+    const mealDetails = document.getElementById("mealDetails");
+
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealsId}`)
         .then(res => res.json())
         .then(data => {
